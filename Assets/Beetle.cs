@@ -26,7 +26,7 @@ public class Beetle : Enemy
 		if (currentScale.x >= maxScale || currentScale.y >= maxScale)
 		{
 			CancelInvoke("Inflate");
-			Destroy(gameObject);
+			Die();
 		}
 	}
 }

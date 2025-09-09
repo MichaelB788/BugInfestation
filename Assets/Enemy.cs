@@ -15,14 +15,9 @@ public class Enemy : BaseCharacter
 	{
 		if (collision.gameObject.CompareTag("Bullet"))
 		{
-			if (health > 1)
-			{
-				GetHit();
-			}
-			else
-			{
-				Die();
-			}
+			if (health > 1) GetHit();
+			else Die();
+
 			scoreManagerScript.IncrementScore(points, scoreMultiplier);
 		}
 		else
