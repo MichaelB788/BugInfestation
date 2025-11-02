@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : BaseCharacter
 {
-	public float jumpForce = 10.0f;
+	public float jumpForce = 15.0f;
 	private bool isGrounded;
 
 	void Update()

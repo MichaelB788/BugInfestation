@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Beetle : Enemy
 {
@@ -26,7 +27,14 @@ public class Beetle : Enemy
 		if (currentScale.x >= maxScale || currentScale.y >= maxScale)
 		{
 			CancelInvoke("Inflate");
-			Die();
+			Destroy(gameObject);
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
+	}
+
+	protected override void Die()
+	{
+		base.Die();
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }

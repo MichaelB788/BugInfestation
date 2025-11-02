@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class CherryProjectile : MonoBehaviour
 {
-	public GameObject projectilePrefab;
-	public GameObject playerPrefab;
-	public float launchForce = 20f;
+	public GameObject player;
 
-  private GameObject projectile;
+	private float launchForce = 20f;
+	private bool isFired = false;
+
+	private Rigidbody2D cherryBody;
+	private SpriteRenderer spriteRenderer;
+
+
+	void Start()
+	{
+		cherryBody = GetComponent<Rigidbody2D>();
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		spriteRenderer.enabled = false;
+	}
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space) && !isFired)
 		{
 			LaunchProjectile();
 		}
@@ -18,21 +28,17 @@ public class CherryProjectile : MonoBehaviour
 
 	void LaunchProjectile()
 	{
-    projectile = Instantiate(projectilePrefab);
-		projectile.transform.position = playerPrefab.GetComponent<Rigidbody2D>().position;
-
-		Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-    rb.linearVelocity = Vector2.up * launchForce;
-
-    Destroy(projectile, 3f);
+		isFired = true;
+		spriteRenderer.enabled = true;
+		transform.position = player.GetComponent<Rigidbody2D>().position;
+		cherryBody.linearVelocity = Vector2.up * launchForce;
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.CompareTag("Enemy"))
-    {
-      Destroy(projectile);
-    }
-    ;
+		if (collision.gameObject.CompareTag("Player")) return;
+
+		spriteRenderer.enabled = false;
+		isFired = false;
 	}
 }
