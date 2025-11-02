@@ -1,3 +1,0 @@
-repository "MyGame/FoxGame@2475878024794@cloud"
-  path "/"
-    smartbranch "/main"
