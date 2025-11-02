@@ -1,33 +1,32 @@
 using UnityEngine;
-using System.Collections;
 
 public class Beetle : Enemy
 {
-  public float maxScale = 5.0f;
-  public float duration = 10.0f;
+	public float inflationRate = 0.05f;
+	public float inflationInterval = 0.1f;
+	public float maxScale = 3.0f;
 
-  // Start is called once before the first execution of Update after the MonoBehaviour is created
-  void Start()
-  {
-		scoreMultiplier = 2;
+	void Start()
+	{
+		scoreMultiplier = 2.0f;
 		points = 5;
 		direction = Vector2.right;
-    StartCoroutine(InflationKink(maxScale, duration));
-  }
+		InvokeRepeating("Inflate", 0f, inflationInterval);
+	}
 
-  IEnumerator InflationKink(float targetScaleMultiplier, float timeToScale)
-  {
-    Vector2 initialScale = transform.localScale;
-    Vector2 finalScale = initialScale * targetScaleMultiplier;
-    float elapsed = 0;
+	void Inflate()
+	{
+		// Grow the sprite
+		Vector2 currentScale = transform.localScale;
+		currentScale.x -= inflationRate;
+		currentScale.y += inflationRate;
+		transform.localScale = currentScale;
 
-    while (elapsed < timeToScale)
-    {
-      transform.localScale = Vector2.Lerp(initialScale, finalScale, (elapsed / timeToScale));
-      elapsed += Time.deltaTime;
-      yield return null;
-    }
-
-    transform.localScale = finalScale;
-  }
+		// Check if we've reached max scale
+		if (currentScale.x >= maxScale || currentScale.y >= maxScale)
+		{
+			CancelInvoke("Inflate");
+			Destroy(gameObject);
+		}
+	}
 }

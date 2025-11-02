@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : BaseCharacter
 {
 	public ScoreManager scoreManagerScript;
-	public int scoreMultiplier;
+	public float scoreMultiplier;
 	public int points;
 
 	protected virtual void FixedUpdate()
