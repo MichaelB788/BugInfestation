@@ -1,15 +1,16 @@
 using UnityEngine;
 
-public class Player : BaseCharacter
+public class Player : Entity
 {
 	public float jumpForce = 15.0f;
 	private bool isGrounded;
+	private bool isOnWall;
 
 	void Update()
 	{
-		direction.x = Input.GetAxis("Horizontal");
+		direction.x = isOnWall? 0 : Input.GetAxis("Horizontal") * moveSpeed;
 		direction.y = rb.linearVelocityY;
-		Move(new Vector2(direction.x * moveSpeed, direction.y));
+		Move(direction);
 
 		if (Input.GetKeyDown(KeyCode.W) && isGrounded)
 		{
@@ -21,6 +22,11 @@ public class Player : BaseCharacter
 		if (collision.gameObject.CompareTag("Floor"))
 		{
 			isGrounded = true;
+			isOnWall = false;
+		}
+		else if (collision.gameObject.CompareTag("Wall"))
+		{
+			isOnWall = true;
 		}
 	}
 

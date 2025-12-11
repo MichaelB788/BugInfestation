@@ -1,10 +1,8 @@
 using UnityEngine;
-public class Vulture : Enemy
+public class Vulture : Hittable
 {
 	private void Start()
 	{
-		scoreMultiplier = 1;
-		points = 1;
 		direction = Random.insideUnitCircle.normalized;
 	}
 }

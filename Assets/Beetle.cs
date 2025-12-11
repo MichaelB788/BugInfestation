@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Beetle : Enemy
+public class Beetle : Hittable
 {
 	public float inflationRate = 0.05f;
 	public float inflationInterval = 0.1f;
@@ -9,8 +9,6 @@ public class Beetle : Enemy
 
 	void Start()
 	{
-		scoreMultiplier = 2.0f;
-		points = 5;
 		direction = Vector2.right;
 		InvokeRepeating("Inflate", 0f, inflationInterval);
 	}
@@ -32,7 +30,7 @@ public class Beetle : Enemy
 		}
 	}
 
-	protected override void Die()
+	public override void Die()
 	{
 		base.Die();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

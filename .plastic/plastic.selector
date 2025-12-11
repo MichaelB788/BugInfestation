@@ -1,3 +1,4 @@
-repository "MyGame/FoxGame@2475878024794@cloud"
+repository "BugInfestation/BugInfestation 2025-11-02_06-39-52@2475878024794@cloud"
   path "/"
-    smartbranch "/main"
+    br "/main"
+    co "/main"

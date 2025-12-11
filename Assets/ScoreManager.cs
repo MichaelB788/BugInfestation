@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
 	public TextMeshProUGUI scoreUI;
-  private int score = 0;
+  private uint score = 0;
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
@@ -19,8 +19,8 @@ public class ScoreManager : MonoBehaviour
 		scoreUI.text = "Score: " + score.ToString();
 	}
 
-	public void IncrementScore(int points, float scoreMultiplier)
+	public void IncrementScore(uint points, float scoreMultiplier)
 	{
-		score += (int)(points * scoreMultiplier);
+		score += (uint)(points * scoreMultiplier);
 	}
 }
