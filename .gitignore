@@ -60,4 +60,6 @@ crashlytics-build.properties
 Thumbs.db
 Desktop.ini
 WebGL*
+*Webgl*
 webgl*
+*webgl*
