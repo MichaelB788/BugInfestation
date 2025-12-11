@@ -11,7 +11,7 @@ public class Hittable : Entity
 
 	public ScoreManager scoreManager;
 
-	public override void Awake()
+	protected override void Awake()
 	{
 		base.Awake();
 		scoreManager = GetComponent<ScoreManager>();

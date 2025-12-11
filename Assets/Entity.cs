@@ -5,10 +5,10 @@ public class Entity : MonoBehaviour
 	public float moveSpeed;
 	public Vector2 direction;
 
-	public Rigidbody2D rb;
-	public SpriteRenderer sr;
+	protected Rigidbody2D rb;
+	protected SpriteRenderer sr;
 
-	public virtual void Awake()
+	protected virtual void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		Debug.Assert(rb != null);
@@ -17,7 +17,7 @@ public class Entity : MonoBehaviour
 		Debug.Assert(sr != null);
 	}
 
-	public virtual void Move(Vector2 direction)
+	protected virtual void Move(Vector2 direction)
 	{
 		rb.linearVelocity = direction;
 		if (rb.linearVelocityX > 0) sr.flipX = false;
