@@ -3,8 +3,7 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
 	public float moveSpeed;
-	public Vector2 direction;
-
+	protected Vector2 direction;
 	protected Rigidbody2D rb;
 	protected SpriteRenderer sr;
 

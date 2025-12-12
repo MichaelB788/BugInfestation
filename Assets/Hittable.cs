@@ -14,12 +14,10 @@ public class Hittable : Entity
 	protected override void Awake()
 	{
 		base.Awake();
-		scoreManager = GetComponent<ScoreManager>();
 		Debug.Assert(scoreManager != null);
 		hit = GetComponent<AudioClip>();
 		death = GetComponent<AudioClip>();
 	}
-
 
 	public virtual void FixedUpdate()
 	{
