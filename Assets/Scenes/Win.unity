@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 88625824}
   - component: {fileID: 88625823}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WinCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,6 +551,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1956309086}
   - {fileID: 88625826}
   - {fileID: 1656428565}
+  - {fileID: 1956309086}

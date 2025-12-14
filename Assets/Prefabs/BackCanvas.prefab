@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 178819224021786774}
   - component: {fileID: 7871627238001833464}
   m_Layer: 5
-  m_Name: Back
+  m_Name: BackCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 2805846183107036039}
   - component: {fileID: 3810516990985773447}
   m_Layer: 5
-  m_Name: Back
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
