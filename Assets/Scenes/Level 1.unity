@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2014148915}
+      - m_Target: {fileID: 1509589684}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2014148915}
+      - m_Target: {fileID: 1509589684}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2014148915}
+      - m_Target: {fileID: 1509589684}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -1390,6 +1390,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5172916316250552715, guid: 9e1eecec3ad10be419f06493d625b2ef, type: 3}
   m_PrefabInstance: {fileID: 4507313619663411536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1509589680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007811903123975917, guid: 1ca9cb14185c83315aaf57a7c2661a88, type: 3}
+  m_PrefabInstance: {fileID: 3182854398586754154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1509589684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509589680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab9d2bbf2c8c5745bec0faf80f3fe67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  pauseMenu: {fileID: 2014148911}
 --- !u!1 &1554955647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,7 +1680,6 @@ GameObject:
   - component: {fileID: 2014148912}
   - component: {fileID: 2014148914}
   - component: {fileID: 2014148913}
-  - component: {fileID: 2014148915}
   m_Layer: 5
   m_Name: PauseMenuPanel
   m_TagString: Untagged
@@ -1731,19 +1748,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014148911}
   m_CullTransparentMesh: 1
---- !u!114 &2014148915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014148911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab9d2bbf2c8c5745bec0faf80f3fe67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
-  pauseMenu: {fileID: 2014148911}
 --- !u!1001 &2019784895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2096,7 +2100,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4745967019530714446, guid: 1ca9cb14185c83315aaf57a7c2661a88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2014148912}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5007811903123975917, guid: 1ca9cb14185c83315aaf57a7c2661a88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1509589684}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca9cb14185c83315aaf57a7c2661a88, type: 3}
 --- !u!1001 &4507313619663411536
 PrefabInstance:

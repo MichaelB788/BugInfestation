@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 258827516}
   - component: {fileID: 258827515}
   - component: {fileID: 258827514}
+  - component: {fileID: 258827517}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -286,6 +287,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &258827517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258827513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49d53fbc580ffb4eb03abb90c0c062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
 --- !u!1 &421515429
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +417,14 @@ PrefabInstance:
     - target: {fileID: 2363593803024585685, guid: 2cdc6d87da9408a44a5dfae0bc74ad31, type: 3}
       propertyPath: m_Name
       value: BackCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810516990985773447, guid: 2cdc6d87da9408a44a5dfae0bc74ad31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 258827517}
+    - target: {fileID: 3810516990985773447, guid: 2cdc6d87da9408a44a5dfae0bc74ad31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMain
       objectReference: {fileID: 0}
     - target: {fileID: 3862128205954293713, guid: 2cdc6d87da9408a44a5dfae0bc74ad31, type: 3}
       propertyPath: m_Name

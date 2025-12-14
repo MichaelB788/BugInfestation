@@ -404,6 +404,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3810516990985773447, guid: 2cdc6d87da9408a44a5dfae0bc74ad31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1541718196}
+    - target: {fileID: 3810516990985773447, guid: 2cdc6d87da9408a44a5dfae0bc74ad31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMain
+      objectReference: {fileID: 0}
     - target: {fileID: 7267310920591233146, guid: 2cdc6d87da9408a44a5dfae0bc74ad31, type: 3}
       propertyPath: m_Pivot.x
       value: 0
